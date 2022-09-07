@@ -29,6 +29,7 @@ public class Main {
         e.children.addAll(Arrays.asList(f, g));
         f.children.addAll(Arrays.asList(h, i));
         g.children.addAll(Arrays.asList(j));
+        // h.children.addAll(Arrays.asList(h));
         
 
         Graph secondGraph = new Graph("Árvore", Arrays.asList(e,f,g,h,i,j));

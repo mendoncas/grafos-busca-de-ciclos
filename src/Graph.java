@@ -9,7 +9,7 @@ public class Graph {
         this.nodes = nodes;
     }
 
-    public Boolean hasCicle() {
+    public boolean hasCicle() {
         for (Node node : nodes) {
             if (node.hasCicle()) {
                 System.out.println("O grafo "+ name +" é cíclico porque o nó " + node.name

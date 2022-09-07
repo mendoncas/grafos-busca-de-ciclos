@@ -15,18 +15,12 @@ public class Node {
         return this.depthFirstSearch(nodeName, searched);
     }
 
-    public Boolean depthFirstSearch(String nodeName, List<Node> searched) {
+    public boolean depthFirstSearch(String nodeName, List<Node> searched) {
         searched.add(this);
         for (Node child : children) {
-            // System.out.println("Buscando em " + child.name);
-            if (child.name == nodeName)
+            if (child.name == nodeName || (!searched.contains(child) && child.depthFirstSearch(nodeName, searched)))
                 return true;
-
-            if (!searched.contains(child) && child.depthFirstSearch(nodeName, searched)) {
-                return true;
-            }
         }
-        // System.out.println("Busquei todos os nós filhos de " + name);
         return false;
     }
 
